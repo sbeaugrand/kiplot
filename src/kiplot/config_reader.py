@@ -456,7 +456,7 @@ class CfgYamlReader(CfgReader):
         """
 
         try:
-            data = yaml.load(fstream)
+            data = yaml.load(fstream, Loader=yaml.FullLoader)
         except yaml.YAMLError as e:
             raise YamlError("Error loading YAML")
             return None
